@@ -5,8 +5,9 @@
 #### 安装 rust 环境
  参考 
  [官网安装教程-Rust 编译工具](https://www.rust-lang.org/zh-CN/tools/install)
+
  [菜鸟教程](https://www.runoob.com/rust/rust-setup.html)
- ######
+
  Rust 的编译工具依赖 C 语言的编译工具，这意味着你的电脑上至少已经存在一个 C 语言的编译环境。如果你使用的是 Linux 系统，往往已经具备了 GCC 或 clang。如果你使用的是 macOS，需要安装 Xcode。如果你是用的是 Windows 操作系统，你需要安装 Visual Studio 2013 或以上的环境（需要 C/C++ 支持）以使用 MSVC 或安装 MinGW + GCC 编译环境（Cygwin 还没有测试）。
 1. windows 环境 
 ```
@@ -89,7 +90,7 @@ source $HOME/.cargo/env
 安装完成后，输入 `rustc -V` 查看rust版本信息输出
 `rust` 包管理器是 `cargo` 输入 `cargo -V`查看版本输出
 
-*注意：使用vscode编辑rust时需要安装c/c++扩展才能正常启动调试器*
+**注意：使用vscode编辑rust时需要安装c/c++扩展才能正常启动调试器**
 
 #### 全局安装tauri打包工具
 `cargo install tauri-bundler --force`
@@ -123,6 +124,7 @@ scripts:{
   ...
 }
 ```
-*注意*
+**注意**
 所有依赖安装好了之后，先运行一次 `npm run start:tauri`。这时，`cargo` 会给 `rust` 项目安装依赖。过程会比较慢，有可能会因为网络问题导致安装失败，不要慌，多尝试几次。安装完成后。`ctrl+c` 推出，然后再使用 `npm run start` 一次性启动整个项目
 
+![启动图片](./images/tauri-umi.png)
